@@ -56,7 +56,7 @@ namespace AdminPanelCRUD.Areas.Manage.Controllers
         [HttpPost]
         public IActionResult Delete(BrandSlider brandSlider)
         {
-            Slider existBrandSlider = _pustokContext.Sliders.Find(brandSlider.Id);
+            BrandSlider existBrandSlider = _pustokContext.BrandSliders.Find(brandSlider.Id);
             if (existBrandSlider == null) View("Error");
             _pustokContext.BrandSliders.Remove(existBrandSlider);
             _pustokContext.SaveChanges();
