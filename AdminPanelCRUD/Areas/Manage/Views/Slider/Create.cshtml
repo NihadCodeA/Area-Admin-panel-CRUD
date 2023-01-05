@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Create";
+}
+@model Slider;
+<div class="container">
+<h1 class="mt-5">Create a new slider</h1>
+    <form method="post" asp-action="create">
+    <div class="row">
+            <div class="form-group col-3">
+                <label asp-for="FirstTitle">First title</label>
+                <input asp-for="FirstTitle" class="form-control" placeholder="First title">
+            </div>
+            <div class="form-group col-3">
+                <label asp-for="SecondTitle">Second title</label>
+                <input asp-for="SecondTitle" class="form-control" placeholder="Second title">
+            </div>
+            <div class="form-group col-3">
+                <label asp-for="RedirectUrl">Redirect url</label>
+                <input asp-for="RedirectUrl" class="form-control" placeholder="Redirect url">
+            </div>
+            <div class="form-group col-3">
+                <label asp-for="RedirectUrlText">Redirect url text</label>
+                <input asp-for="RedirectUrlText" class="form-control" placeholder="Redirect url text">
+            </div>
+            <div class="form-group col-8">
+                <label asp-for="Description">Description</label>
+                <textarea asp-for="Description" class="form-control" style="height:100px" placeholder="Description"></textarea>
+            </div>
+            <div class="form-group col-8">
+                <label asp-for="ImgUrl">Img url</label>
+                <input asp-for="ImgUrl" class="form-control" placeholder="Img url">
+            </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
